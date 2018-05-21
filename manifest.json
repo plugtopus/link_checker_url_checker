@@ -1,0 +1,25 @@
+{
+	"author": "Plugtopus Agency",
+	"name": "__MSG_name__",
+	"version": "21.5.18.1", 
+	"manifest_version": 2,
+	"default_locale": "ru",
+	"description": "__MSG_desc__.",
+	"homepage_url": "https://plugtopus.agency",
+	"icons": {"128": "icon/icon.png"}, 
+	"browser_action": {
+		"default_icon": "icon/icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+	   {
+		"matches": ["<all_urls>"],
+		"js": ["js/content.js"],
+		"run_at": "document_end"
+	   }
+	],
+	"permissions": [
+		"tabs", 
+		"storage"
+	  ]
+}
